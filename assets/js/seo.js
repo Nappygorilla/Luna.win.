@@ -1,8 +1,8 @@
 (() => {
   'use strict';
 
-  const BASE = '/NoContext-website/';
-  const SITE = 'https://nappygorilla.github.io/NoContext-website/';
+  const BASE = '/Luna.win./';
+  const SITE = 'https://nappygorilla.github.io/Luna.win./';
   const OG_IMAGE = SITE + 'assets/img/og-image.svg';
   const API = 'https://nocontext.onrender.com';
   const routes = {
