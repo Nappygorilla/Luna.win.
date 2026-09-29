@@ -33,7 +33,7 @@
 <section class="account-card account-card--hero"><h2>Account</h2><p>Manage your luna.win account and access your available products.</p><div class="account-profile"><div class="account-avatar" data-account-avatar>NC</div><div><strong data-account-user-secondary>—</strong><p>Authenticated luna.win user</p></div></div><div class="account-meta"><div><span>Email</span><strong data-account-email>—</strong></div><div><span>User ID</span><strong data-account-id>—</strong></div><div><span>Session expires</span><strong data-account-expiry>—</strong></div><div><span>Authentication</span><strong>Secure server session</strong></div></div><div class="account-actions"><button class="btn btn-outline" type="button" data-account-logout>Sign Out</button><a class="btn btn-primary" href="store.html">View Store</a></div></section>
 <section class="account-card"><h2>Products</h2><p>Your current product access.</p><div class="account-product"><div><div class="product-name">luna.win External</div><div class="product-state available">Available</div></div><a class="btn btn-outline" href="store.html">Open</a></div><div class="account-product"><div><div class="product-name">Executor</div><div class="product-state">Coming soon</div></div></div><div class="account-product"><div><div class="product-name">FiveM</div><div class="product-state">Coming soon</div></div></div></section>
 <section class="account-card"><h2>Security</h2><p>Your login is protected by a server-side session. License keys are verified by the server and are not stored in this page.</p><p class="account-note">Never share an active license key publicly.</p></section>
-<section class="account-card"><h2>Free Key</h2><p>Complete the Work.ink step first. Your key is generated only after the server verifies the completed link.</p><div class="account-actions"><a class="btn btn-primary" href="https://nocontext.onrender.com/api/keys/workink/start">Get Free Key</a><a class="btn btn-outline" href="key.html">Key Page</a></div><p class="account-note">Normal accounts can claim one 3-day key at a time. Verified Discord boosters can claim one 7-day key at a time.</p></section>
+<section class="account-card"><h2>Free Key</h2><p>Complete the Work.ink step first. Your key is generated only after the server verifies the completed link.</p><div class="account-actions"><a class="btn btn-primary" href="/api/keys/workink/start">Get Free Key</a><a class="btn btn-outline" href="key.html">Key Page</a></div><p class="account-note">Normal accounts can claim one 3-day key at a time. Verified Discord boosters can claim one 7-day key at a time.</p></section>
 <section class="account-card"><h2>License History</h2><p>Licenses attached to your account.</p><div class="license-box"><div data-license-list><div class="license-empty">Loading licenses…</div></div></div></section>
 </div>
 <section id="tickets" class="account-card ticket-section" data-dashboard-view="tickets" aria-labelledby="tickets-title">
@@ -50,7 +50,7 @@
   </div>
 </section>
 </div></main>
-<script>window.LUNA_API_URL='https://nocontext.onrender.com';</script><script src="assets/js/main.js"></script><script src="assets/js/account-auth.js"></script>
+<script>window.LUNA_API_URL='';</script><script src="assets/js/main.js"></script><script src="assets/js/account-auth.js"></script>
 <script>
 (() => {
   const menu = document.querySelector('[data-dashboard-menu]');
@@ -82,7 +82,7 @@
   const initial = location.hash === '#tickets' ? 'tickets' : 'account';
   const initialLink = links.find(link => link.dataset.dashboardLink === initial);
   initialLink?.click();
-  fetch('https://nocontext.onrender.com/api/auth/me', { credentials: 'include', cache: 'no-store' })
+  fetch('/api/auth/me', { credentials: 'include', cache: 'no-store' })
     .then(response => response.json().catch(() => ({})))
     .then(data => { if (Number(data?.user?.id) === 1 && data?.authenticated) adminLink.style.display = 'flex'; })
     .catch(() => {});
