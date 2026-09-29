@@ -1,5 +1,5 @@
 const CACHE = 'luna-v5';
-const BASE = '/NoContext-website/';
+const BASE = '/Luna.win./';
 const CORE = [
     BASE,
     `${BASE}index.html`,
