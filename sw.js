@@ -1,4 +1,4 @@
-const CACHE = 'luna-v5';
+const CACHE = 'luna-v6';
 const BASE = '/Luna.win./';
 const CORE = [
     BASE,
