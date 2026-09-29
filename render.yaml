@@ -4,7 +4,7 @@ services:
     runtime: docker
     plan: free
     region: virginia
-    repo: https://github.com/Nappygorilla/NoContext-website
+    repo: https://github.com/Nappygorilla/Luna.win.
     branch: main
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
@@ -19,7 +19,7 @@ services:
       - key: FRONTEND_ORIGIN
         value: https://nappygorilla.github.io
       - key: FRONTEND_URL
-        value: https://nappygorilla.github.io/NoContext-website/key.html
+        value: https://nappygorilla.github.io/Luna.win./key.html
       - key: SESSION_TTL_DAYS
         value: "30"
       - key: LICENSE_TTL_DAYS
@@ -52,7 +52,7 @@ services:
     runtime: node
     plan: free
     region: virginia
-    repo: https://github.com/Nappygorilla/NoContext-website
+    repo: https://github.com/Nappygorilla/Luna.win.
     branch: main
     rootDir: discord-bot
     buildCommand: npm install
