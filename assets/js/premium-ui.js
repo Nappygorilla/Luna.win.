@@ -1,8 +1,8 @@
 (() => {
   'use strict';
 
-  const BASE = '/luna.win-website/';
-  const API = 'https://nocontext.onrender.com';
+  const BASE = '/Luna.win./';
+  const API = '';
   const esc = value => String(value).replace(/[&<>\"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[ch]));
 
   function lunaBrand() {
