@@ -1,5 +1,5 @@
 /** API boundary for the static GitHub Pages frontend. */
-const API_BASE_URL = 'https://nocontext.onrender.com';
+const API_BASE_URL = '';
 const API_CONFIG = Object.freeze({
     BASE_URL: String(window.LUNA_API_URL || API_BASE_URL).trim().replace(/\/$/, ''),
     ENDPOINTS: Object.freeze({
