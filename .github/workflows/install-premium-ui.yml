@@ -23,8 +23,8 @@ jobs:
           import re
 
           html_files = sorted(Path('.').rglob('*.html'))
-          css_tag = '<link rel="stylesheet" href="/NoContext-website/assets/css/premium.css?v=20260918">'
-          js_tag = '<script src="/NoContext-website/assets/js/premium-ui.js?v=20260918"></script>'
+          css_tag = '<link rel="stylesheet" href="/Luna.win./assets/css/premium.css?v=20260918">'
+          js_tag = '<script src="/Luna.win./assets/js/premium-ui.js?v=20260918"></script>'
           changed = []
           for path in html_files:
               text = path.read_text(encoding='utf-8')
@@ -34,7 +34,7 @@ jobs:
                   text = text.replace('</head>', f'{css_tag}</head>', 1)
               else:
                   text = re.sub(
-                      r'<link rel="stylesheet" href="/NoContext-website/assets/css/premium\.css\?v=[^"]+">',
+                      r'<link rel="stylesheet" href="/Luna.win./assets/css/premium\.css\?v=[^"]+">',
                       css_tag,
                       text,
                       count=1,
@@ -44,7 +44,7 @@ jobs:
                   text = text.replace('</body>', f'{js_tag}</body>', 1)
               else:
                   text = re.sub(
-                      r'<script src="/NoContext-website/assets/js/premium-ui\.js\?v=[^"]+"></script>',
+                      r'<script src="/Luna.win./assets/js/premium-ui\.js\?v=[^"]+"></script>',
                       js_tag,
                       text,
                       count=1,
