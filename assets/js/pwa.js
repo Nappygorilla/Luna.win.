@@ -13,7 +13,7 @@
         node._timer = setTimeout(() => { node.style.opacity = '0'; node.style.transform = 'translateX(-50%) translateY(12px)'; }, 3200);
     };
 
-    const apiBase = String(window.LUNA_API_URL || 'https://nocontext.onrender.com').replace(/\/$/, '');
+    const apiBase = String(window.LUNA_API_URL || '').replace(/\/$/, '');
     const backend = document.getElementById('luna-backend-status');
     if (backend) {
         backend.textContent = 'Checking…'; backend.classList.remove('online');
